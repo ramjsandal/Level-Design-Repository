@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/TexturedProject2.unity
+    guid: 2e2b5c3047ca9fd4e8379644ff442bb2
   m_configObjects: {}
