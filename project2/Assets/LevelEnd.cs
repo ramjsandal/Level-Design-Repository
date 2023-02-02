@@ -35,5 +35,14 @@ public class LevelEnd : MonoBehaviour
     void OnGUI()
     {
         GUI.Button(new Rect(20, 20, 150, 30), "Time: " + inGameTime);
+
+        if (ended)
+        {
+            int xPos = (Screen.width / 2) - 200;
+            int yPos = (Screen.height / 2) - 200;
+                
+            GUI.Button(new Rect(xPos, yPos, 
+                200, 200), "You win!");
+        }
     }
 }
