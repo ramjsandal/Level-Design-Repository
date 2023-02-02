@@ -12,7 +12,8 @@ public class LightController : MonoBehaviour
         // Set dimly lit lights
         for (int i = 0; i < dimLights.Length; i++)
         {
-            dimLights[i].intensity = 0.5f;
+            dimLights[i].intensity = 0.2f;
+            // dimLights[i].color = new Color(1, 0, -1); // blue tint
         }
 
         // Set fully bright lights
