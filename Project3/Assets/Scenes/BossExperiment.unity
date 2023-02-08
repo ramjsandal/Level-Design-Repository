@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.035910133, g: 0, b: 0.018116357, a: 1}
+  m_IndirectSpecularColor: {r: 0.036190998, g: 0, b: 0.018116357, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -688,7 +688,7 @@ GameObject:
   - component: {fileID: 1247855814}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -929,6 +929,7 @@ GameObject:
   - component: {fileID: 1895089651}
   - component: {fileID: 1895089653}
   - component: {fileID: 1895089652}
+  - component: {fileID: 1895089655}
   m_Layer: 0
   m_Name: Icosphere (1)
   m_TagString: Untagged
@@ -1004,6 +1005,20 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1895089650}
   m_Mesh: {fileID: 289301614986012343, guid: 0c393f6473f914528961ce69237e2738, type: 3}
+--- !u!114 &1895089655
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1895089650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa234e381837f0f42b1c83e4b717eb2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: {fileID: 5627159940481535595, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+  spawningInterval: 2
 --- !u!1 &2069252115
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,6 +1399,67 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9096621582420498040}
   m_Mesh: {fileID: 289301614986012343, guid: 0c393f6473f914528961ce69237e2738, type: 3}
+--- !u!1001 &8940620209677494263
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2742316422119585566, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: target
+      value: 
+      objectReference: {fileID: 1247855812}
+    - target: {fileID: 5627159940481535595, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_Name
+      value: Bullet
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_RootOrder
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.61
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4.87
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 7.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9100258751449018475, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
 --- !u!1 &9096621582420498040
 GameObject:
   m_ObjectHideFlags: 0
@@ -1395,6 +1471,7 @@ GameObject:
   - component: {fileID: 1463901971482579435}
   - component: {fileID: 7369847326334765523}
   - component: {fileID: 1915853672505461352}
+  - component: {fileID: 9096621582420498041}
   m_Layer: 0
   m_Name: Icosphere
   m_TagString: Untagged
@@ -1402,3 +1479,17 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &9096621582420498041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9096621582420498040}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa234e381837f0f42b1c83e4b717eb2e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawn: {fileID: 5627159940481535595, guid: 0f2631c37cb2dc748bfb467fb90a4394, type: 3}
+  spawningInterval: 2
