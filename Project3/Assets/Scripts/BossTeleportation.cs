@@ -7,10 +7,11 @@ public class BossTeleportation : MonoBehaviour
     public float minX, maxX, minZ, maxZ; // public variables to set the range of the area to teleport in
     public float smallTel = 2f;
     public float bigTel = 4f;
+    [SerializeField] private float repeatInterval = 3f;
 
     void Start()
     {
-        InvokeRepeating("Teleport", 3f, Random.Range(smallTel, bigTel)); // invoke the Teleport function every 3 to 5 seconds
+        InvokeRepeating("Teleport", repeatInterval, Random.Range(smallTel, bigTel)); // invoke the Teleport function every 3 to 5 seconds
     }
 
     void Teleport()
