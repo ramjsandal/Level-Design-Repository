@@ -4,8 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Scenes/BossExperiment.unity
-    guid: 478bd5d67f54443028a8947f4c56af71
+  m_Scenes: []
   m_configObjects: {}
