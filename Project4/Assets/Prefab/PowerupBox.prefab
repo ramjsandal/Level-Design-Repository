@@ -111,3 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _power: 
+  text: {fileID: 7558492807381564263, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}

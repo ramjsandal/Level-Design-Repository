@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.18028331, g: 0.2257133, b: 0.3069217, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -218,6 +218,7 @@ RectTransform:
   - {fileID: 1322027214}
   - {fileID: 474794616}
   - {fileID: 20772210}
+  - {fileID: 2003822842}
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -694,6 +695,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2582774683131200742, guid: 3f9361c761e34684f8c99e79c41ace26, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 2003822843}
     - target: {fileID: 3768217894707672177, guid: 3f9361c761e34684f8c99e79c41ace26, type: 3}
       propertyPath: m_Name
       value: PowerupBox (2)
@@ -1508,6 +1513,123 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1588945458
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4493402}
+    m_Modifications:
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_Pivot.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_Pivot.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 160
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -50
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1460164707980113802, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_Name
+      value: Powerup
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558492807381564263, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_Color.b
+      value: 0.39847767
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558492807381564263, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_Color.g
+      value: 0.8490566
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558492807381564263, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_Color.r
+      value: 0.25151297
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558492807381564263, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_FontData.m_MinSize
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7558492807381564263, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+      propertyPath: m_FontData.m_FontSize
+      value: 20
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
 --- !u!1001 &1884733690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1559,12 +1681,32 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2582774683131200742, guid: 3f9361c761e34684f8c99e79c41ace26, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 2003822843}
     - target: {fileID: 3768217894707672177, guid: 3f9361c761e34684f8c99e79c41ace26, type: 3}
       propertyPath: m_Name
       value: PowerupBox (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3f9361c761e34684f8c99e79c41ace26, type: 3}
+--- !u!224 &2003822842 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 365474325757795703, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+  m_PrefabInstance: {fileID: 1588945458}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2003822843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7558492807381564263, guid: 2dd6dc6e2a6fb084b9a7d785d3efbc5d, type: 3}
+  m_PrefabInstance: {fileID: 1588945458}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &478751552714223507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1616,6 +1758,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2582774683131200742, guid: 3f9361c761e34684f8c99e79c41ace26, type: 3}
+      propertyPath: text
+      value: 
+      objectReference: {fileID: 2003822843}
     - target: {fileID: 3768217894707672177, guid: 3f9361c761e34684f8c99e79c41ace26, type: 3}
       propertyPath: m_Name
       value: PowerupBox
