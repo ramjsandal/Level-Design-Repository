@@ -15,9 +15,13 @@ public class PowerupBox : MonoBehaviour
 
   private PlayerController _playerController;
 
+  private Renderer renderer;
+
   public string _power;
 
   private bool b;
+
+  private Color collectColor = new Color(1, 0, 0, 0.7f);
 
   [SerializeField] private Text text;
   // Start is called before the first frame update
@@ -26,6 +30,7 @@ public class PowerupBox : MonoBehaviour
     _player = GameObject.FindGameObjectWithTag("Player");
     _playerController = _player.GetComponent<PlayerController>();
     _playerHealth = _player.GetComponent<PlayerHealth>();
+    renderer = GetComponent<Renderer>();
 
     _power = _powers[UnityEngine.Random.Range(0, 3)];
     text.text = "No Powers";
@@ -40,7 +45,7 @@ public class PowerupBox : MonoBehaviour
       transform.position = Vector3.MoveTowards(transform.position, dest, 3 * Time.deltaTime);
       transform.Rotate(0, 90 * Time.deltaTime, 0);
       Color orig = GetComponent<Renderer>().material.color;
-      GetComponent<Renderer>().material.color = Color.Lerp(orig, Color.red, Time.deltaTime * 1);
+      renderer.material.color = Color.Lerp(orig, collectColor, Time.deltaTime * 1);
     }
   }
 
