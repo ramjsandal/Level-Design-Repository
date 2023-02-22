@@ -112,7 +112,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   endPoint: {fileID: 0}
-  movespeed: 2
+  movespeed: 10
 --- !u!114 &313854161410230047
 MonoBehaviour:
   m_ObjectHideFlags: 0
