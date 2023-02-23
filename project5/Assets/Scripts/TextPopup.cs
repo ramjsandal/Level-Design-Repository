@@ -9,12 +9,16 @@ public class TextPopup : MonoBehaviour
     public float _timer;
     public Text _respawnTimer;
     public bool _countingDown;
+
+    public string[] insults;
+
+    private string insult;
     // Start is called before the first frame update
     void Start()
     {
         _respawnTimer = (Text) FindObjectOfType(typeof(Text));
         _respawnTimer.enabled = false;
-        _respawnTimer.text = "You died!";
+        insult = insults[Random.Range(0, insults.Length)];
         _countingDown = false;
     }
 
@@ -24,7 +28,7 @@ public class TextPopup : MonoBehaviour
         if (_countingDown)
         {
             _timer -= Time.deltaTime;
-            _respawnTimer.text = "You died!\n " + (int)_timer;
+            _respawnTimer.text = insult + "\n" + (int)_timer;
         }
     }
 }
