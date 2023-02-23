@@ -10,8 +10,11 @@ public class DestroyPlayerOnCollision : MonoBehaviour
 {
   private TextPopup t;
   private bool _destroying;
+  public AudioSource audioSource;
+  public AudioClip clip;
+  public float volume = 1.1f;
 
-  private void Start()
+    private void Start()
   {
     _destroying = false;
   }
@@ -28,9 +31,12 @@ public class DestroyPlayerOnCollision : MonoBehaviour
         t._countingDown = true;
         t._respawnTimer.enabled = true;
         _destroying = true;
+        audioSource.PlayOneShot(clip, volume);
         Invoke(nameof(reloadScene), 10);
+
       }
-    }
+
+     }
   }
 
   private void reloadScene()

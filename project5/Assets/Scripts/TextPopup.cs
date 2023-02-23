@@ -10,6 +10,7 @@ public class TextPopup : MonoBehaviour
     public Text _respawnTimer;
     public bool _countingDown;
 
+
     public string[] insults;
 
     private string insult;

@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e11681c416791804fbc4a03064d3c554, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioSource: {fileID: 2416163526613054361, guid: 6ebff91a67836bf4ebcd8152ca2f7998, type: 3}
+  clip: {fileID: 8300000, guid: 94d1f338526a60341b412bd9c852601d, type: 3}
+  volume: 1.1
 --- !u!1001 &312339188786386929
 PrefabInstance:
   m_ObjectHideFlags: 0
