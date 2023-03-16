@@ -4,5 +4,8 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/BankGreyBox.unity.unity
+    guid: aeb92463bae14424b9fab915574cf970
   m_configObjects: {}
