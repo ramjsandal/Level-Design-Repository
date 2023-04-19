@@ -176,6 +176,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6129062536920443268}
   - component: {fileID: 6792867824910758719}
+  - component: {fileID: 7988544475423232318}
   m_Layer: 0
   m_Name: GoldKey 1
   m_TagString: Untagged
@@ -217,6 +218,19 @@ MonoBehaviour:
   interactionRange: 2
   interactionKey: 102
   ThisObjectsName: Golden Key
+--- !u!65 &7988544475423232318
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6792867824910758718}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.1349862, y: 1, z: 5.7939944}
+  m_Center: {x: 0.053876754, y: 0, z: -1.6841333}
 --- !u!1 &6934803469789970543
 GameObject:
   m_ObjectHideFlags: 0

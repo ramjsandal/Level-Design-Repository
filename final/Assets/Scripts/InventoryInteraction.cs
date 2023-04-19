@@ -14,23 +14,40 @@ public class InventoryInteraction : MonoBehaviour
 
     private GameObject player; // The player object
     private Inventory inventory; // The Inventory component on the object
-
+    private GameObject cam;
+    
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
         inventory = GameObject.FindGameObjectWithTag("InvenText").GetComponent<Inventory>();
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     private void Update()
     {
         if (Vector3.Distance(player.transform.position, transform.position) <= interactionRange)
         {
-            if (Input.GetKeyDown(interactionKey))
+            if (Input.GetKeyDown(interactionKey) && LookingAtObject())
             {
                 inventory.UpdateString(ThisObjectsName, 1);
                 // inventory.GetStringCount("objectName") = inventory.GetStringCount("objectName") + 1;
                 Destroy(gameObject);
             }
         }
+    }
+    
+    bool LookingAtObject()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, interactionRange))
+        {
+            Debug.Log("Looking at " + hit.transform.name);
+            if (hit.transform.position == this.gameObject.transform.position)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 }
