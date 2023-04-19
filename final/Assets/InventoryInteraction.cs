@@ -27,7 +27,7 @@ public class InventoryInteraction : MonoBehaviour
         {
             if (Input.GetKeyDown(interactionKey))
             {
-                inventory.AddString(ThisObjectsName, 1);
+                inventory.UpdateString(ThisObjectsName, 1);
                 // inventory.GetStringCount("objectName") = inventory.GetStringCount("objectName") + 1;
                 Destroy(gameObject);
             }

@@ -21,12 +21,12 @@ public class TeleportObject : MonoBehaviour
             {
                 // Teleport the object to the other position
                 Vector3 teleportPosition = (teleportObj.position == teleportPosition1.position) ? teleportPosition2.position : teleportPosition1.position;
-                StartCoroutine(TeleportObject(teleportPosition));
+                StartCoroutine(MoveObject(teleportPosition));
             }
         }
     }
 
-    IEnumerator TeleportObject(Vector3 newPosition)
+    IEnumerator MoveObject(Vector3 newPosition)
     {
         isTeleporting = true;
         yield return new WaitForSeconds(0.5f); // Add a delay to give the impression of teleportation
