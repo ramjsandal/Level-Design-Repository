@@ -4,14 +4,16 @@ using UnityEngine.UI;
 public class Inventory : MonoBehaviour
 {
     public string[] stringsArray = new string[7]; // An array of 7 slots that takes in a string
+    public int[] countArray = new int[7]; // An array of counters for each string
     public Text displayText; // The text UI element to display the strings
 
     private void Start()
     {
-        // Initialize the array with empty strings
+        // Initialize the arrays with empty strings and zero counts
         for (int i = 0; i < stringsArray.Length; i++)
         {
             stringsArray[i] = "";
+            countArray[i] = 0;
         }
     }
 
@@ -24,26 +26,28 @@ public class Inventory : MonoBehaviour
         // Clear the current text
         displayText.text = "";
 
-        // Display the strings in bullet point format
+        // Display the strings and counts in bullet point format
         for (int i = 0; i < stringsArray.Length; i++)
         {
-            displayText.text += "• " + stringsArray[i] + "\n";
+            displayText.text += "• " + stringsArray[i] + " (" + countArray[i] + ")" + "\n";
         }
     }
 
-    // Method to update a specific string in the array
-    public void UpdateString(int index, string newString)
+    // Method to update a specific string and its counter in the arrays
+    public void UpdateString(int index, string newString, int newCount)
     {
         stringsArray[index] = newString;
+        countArray[index] = newCount;
         UpdateText();
     }
 
-    // Method to clear all strings in the array
+    // Method to clear all strings and counters in the arrays
     public void ClearStrings()
     {
         for (int i = 0; i < stringsArray.Length; i++)
         {
             stringsArray[i] = "";
+            countArray[i] = 0;
         }
         UpdateText();
     }
@@ -74,13 +78,13 @@ public class Inventory : MonoBehaviour
     }
 
     // Method to add a string to the next available empty slot
-    public bool AddString(string newString)
+    public bool AddString(string newString, int newCount)
     {
         for (int i = 0; i < stringsArray.Length; i++)
         {
             if (stringsArray[i] == "")
             {
-                UpdateString(i, newString);
+                UpdateString(i, newString, newCount);
                 return true;
             }
         }
