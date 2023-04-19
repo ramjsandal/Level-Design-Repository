@@ -6,6 +6,10 @@ public class ObjectLerper : MonoBehaviour
     public float range = 10f;
     public Transform positionA;
     public Transform positionB;
+    public GameObject targetTrigger; // player must be close to this object to trigger events
+
+    public bool oneTimeThing = false;
+    private bool activateOnce = false;
 
     private Transform player;
     private bool isMovingTowardsA = false;
@@ -17,14 +21,18 @@ public class ObjectLerper : MonoBehaviour
 
     void Update()
     {
-        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+        float distanceToPlayer = Vector3.Distance(targetTrigger.transform.position, player.position);
 
-        if (distanceToPlayer <= range)
+        if (distanceToPlayer <= range) // player is in range
         {
             isMovingTowardsA = true;
+            if (oneTimeThing) {
+                activateOnce = true; // has now been activated once
+            }
         }
         else
         {
+
             isMovingTowardsA = false;
         }
 
@@ -34,7 +42,9 @@ public class ObjectLerper : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.Lerp(transform.position, positionB.position, Time.deltaTime * lerpSpeed);
+            if (!activateOnce) {
+                transform.position = Vector3.Lerp(transform.position, positionB.position, Time.deltaTime * lerpSpeed);
+            }
         }
     }
 }
