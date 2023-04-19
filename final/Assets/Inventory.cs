@@ -47,4 +47,44 @@ public class Inventory : MonoBehaviour
         }
         UpdateText();
     }
+
+    // Method to check if a string exists in the array
+    public bool StringExists(string searchString, out int index)
+    {
+        index = -1;
+
+        for (int i = 0; i < stringsArray.Length; i++)
+        {
+            if (stringsArray[i] == searchString)
+            {
+                index = i;
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    // Method to get the index of a string in the array
+    public int GetIndexOfString(string searchString)
+    {
+        int index;
+        StringExists(searchString, out index);
+        return index;
+    }
+
+    // Method to add a string to the next available empty slot
+    public bool AddString(string newString)
+    {
+        for (int i = 0; i < stringsArray.Length; i++)
+        {
+            if (stringsArray[i] == "")
+            {
+                UpdateString(i, newString);
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
