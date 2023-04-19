@@ -16,6 +16,7 @@ public class TeleportObject : MonoBehaviour
     private bool moving;
     private Vector3 originalPosition;
     private GameObject player;
+    private GameObject cam;
     private Vector3 destination;
 
     private void Start()
@@ -26,13 +27,14 @@ public class TeleportObject : MonoBehaviour
         destination = destinationObj.position;
         originalPosition = this.transform.position;
         player = GameObject.FindGameObjectWithTag("Player");
+        cam = GameObject.FindGameObjectWithTag("MainCamera");
     }
 
     void Update()
     {
         // Check if the player is within range and presses the F key
         if (Input.GetKeyDown(KeyCode.F) 
-            && Vector3.Distance(player.transform.position, this.transform.position) < teleportRange
+            && LookingAtObject()
             && movable)
         {
             moving = true;
@@ -66,6 +68,21 @@ public class TeleportObject : MonoBehaviour
             movable = true;
             moving = false;
         }
+    }
+
+    bool LookingAtObject()
+    {
+        RaycastHit hit;
+        if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, teleportRange))
+        {
+            Debug.Log("Looking at " + hit.transform.name);
+            if (hit.transform.parent.position == this.gameObject.transform.position)
+            {
+                return true;
+            }
+        }
+
+        return false;
     }
 
     
