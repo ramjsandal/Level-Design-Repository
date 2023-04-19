@@ -1,3 +1,5 @@
+
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +10,7 @@ public class InventoryInteraction : MonoBehaviour
     public KeyCode interactionKey = KeyCode.F; // The key to press for interaction
     public string ThisObjectsName;
 
-    public GameObject inventoryObject; // The object with the Inventory component
+    private GameObject inventoryObject; // The object with the Inventory component
 
     private GameObject player; // The player object
     private Inventory inventory; // The Inventory component on the object
@@ -16,7 +18,7 @@ public class InventoryInteraction : MonoBehaviour
     private void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-        inventory = inventoryObject.GetComponent<Inventory>();
+        inventory = GameObject.FindGameObjectWithTag("InvenText").GetComponent<Inventory>();
     }
 
     private void Update()
