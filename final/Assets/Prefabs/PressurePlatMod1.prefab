@@ -245,6 +245,7 @@ MonoBehaviour:
   range: 2
   positionA: {fileID: 8249646409785365399}
   positionB: {fileID: 7406931629581921330}
+  targetObject: {fileID: 8138574129205678128}
 --- !u!1 &8628628953314238213
 GameObject:
   m_ObjectHideFlags: 0
