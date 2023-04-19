@@ -76,9 +76,16 @@ public class TeleportObject : MonoBehaviour
         if (Physics.Raycast(cam.transform.position, cam.transform.forward, out hit, teleportRange))
         {
             Debug.Log("Looking at " + hit.transform.name);
-            if (hit.transform.parent.position == this.gameObject.transform.position)
+            try
             {
-                return true;
+                if (hit.transform.parent.position == this.gameObject.transform.position)
+                {
+                    return true;
+                }
+            }
+            catch (NullReferenceException e)
+            {
+                return false;
             }
         }
 
