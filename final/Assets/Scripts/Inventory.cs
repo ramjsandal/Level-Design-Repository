@@ -4,13 +4,18 @@ using UnityEngine.UI;
 
 public class Inventory : MonoBehaviour
 {
+    [SerializeField] private int thingsNeeded;
     public string[] stringsArray = new string[7]; // An array of 7 slots that takes in a string
     public int[] countArray = new int[7]; // An array of counters for each string
     public Text displayText; // The text UI element to display the strings
     private int index;
+    private int amtThings;
+    public bool enough;
 
     private void Start()
     {
+        enough = false;
+        amtThings = 0;
         index = 0;
         // Initialize the arrays with empty strings and zero counts
         for (int i = 0; i < stringsArray.Length; i++)
@@ -44,12 +49,19 @@ public class Inventory : MonoBehaviour
         {
             // The string is already in the array
             countArray[flag] += 1;
+            amtThings += 1;
         }
         else
         {
             stringsArray[index] = newString;
             countArray[index] = newCount;
+            amtThings += newCount;
             index += 1;
+        }
+
+        if (amtThings >= thingsNeeded)
+        {
+            enough = true;
         }
     }
 
