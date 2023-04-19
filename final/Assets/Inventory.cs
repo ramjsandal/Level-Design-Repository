@@ -80,15 +80,42 @@ public class Inventory : MonoBehaviour
     // Method to add a string to the next available empty slot
     public bool AddString(string newString, int newCount)
     {
-        for (int i = 0; i < stringsArray.Length; i++)
+        int index;
+        if (StringExists(newString, out index))
         {
-            if (stringsArray[i] == "")
-            {
-                UpdateString(i, newString, newCount);
-                return true;
-            }
+            countArray[index] += newCount; // increment count of existing string
         }
-
-        return false;
+        else
+        {
+            // add new string to the next available empty slot
+            for (int i = 0; i < stringsArray.Length; i++)
+            {
+                if (stringsArray[i] == "")
+                {
+                    stringsArray[i] = newString;
+                    countArray[i] = newCount;
+                    UpdateText();
+                    return true;
+                }
+            }
+            return false; // array is full, could not add new string
+        }
+        UpdateText(); // update display if existing string count was incremented
+        return true;
     }
+
+
+    public int GetStringCount(string searchString)
+        {
+        int index;
+        if (StringExists(searchString, out index))
+        {
+            return countArray[index];
+        }
+        else
+        {
+            return 0;
+        }
+    }
+
 }
