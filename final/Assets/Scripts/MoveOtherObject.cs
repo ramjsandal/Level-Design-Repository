@@ -10,6 +10,7 @@ public class MoveOtherObject : MonoBehaviour
     void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
+        other.enabled = false;
     }
 
     // Update is called once per frame
@@ -17,6 +18,7 @@ public class MoveOtherObject : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F) && LookingAtObject())
         {
+            other.enabled = true;
             other.moving = true;
         }
     }
