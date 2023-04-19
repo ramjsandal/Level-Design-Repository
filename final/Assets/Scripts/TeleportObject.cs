@@ -13,7 +13,7 @@ public class TeleportObject : MonoBehaviour
 
     private bool atOrigin;
     private bool movable;
-    private bool moving;
+    public bool moving;
     private Vector3 originalPosition;
     private GameObject player;
     private GameObject cam;
@@ -84,6 +84,4 @@ public class TeleportObject : MonoBehaviour
 
         return false;
     }
-
-    
 }
