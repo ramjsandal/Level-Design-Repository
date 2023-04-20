@@ -2,17 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Video;
 
 public class RemoveItemsFromInventoryOnInteract : MonoBehaviour
 {
     private GameObject cam;
     private Inventory inv;
     public float interactRange = 2f;
+    private VideoPlayer vp;
+    [SerializeField] private VideoClip clip;
 
     private void Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera");
         inv = GameObject.FindGameObjectWithTag("InvenText").GetComponent<Inventory>();
+        vp = GameObject.FindGameObjectWithTag("VidPlayer").GetComponent<VideoPlayer>();
     }
 
     private void Update()
@@ -20,6 +24,9 @@ public class RemoveItemsFromInventoryOnInteract : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.F) && LookingAtObject())
         {
             inv.ClearInventory();
+            vp.clip = clip;
+            vp.Play();
+            vp.isLooping = false;
         }
     }
 
