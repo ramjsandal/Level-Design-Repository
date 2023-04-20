@@ -7,16 +7,19 @@ public class Inventory : MonoBehaviour
     [SerializeField] private int thingsNeeded;
     public string[] stringsArray = new string[7]; // An array of 7 slots that takes in a string
     public int[] countArray = new int[7]; // An array of counters for each string
+    public AudioClip[] sfxArray = new AudioClip[5];
     public Text displayText; // The text UI element to display the strings
     private int index;
     private int amtThings;
     public bool enough;
+    private GameObject player;
 
     private void Start()
     {
         enough = false;
         amtThings = 0;
         index = 0;
+        player = GameObject.FindGameObjectWithTag("Player");
         // Initialize the arrays with empty strings and zero counts
         for (int i = 0; i < stringsArray.Length; i++)
         {
@@ -63,6 +66,13 @@ public class Inventory : MonoBehaviour
         {
             enough = true;
         }
+
+        int idx = amtThings - 1;
+        if (amtThings >= sfxArray.Length)
+        {
+            idx = sfxArray.Length - 1;
+        }
+        AudioSource.PlayClipAtPoint(sfxArray[idx], player.transform.position);
     }
 
     // Method to check if a string exists in the array returns its
