@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Cryptography;
 using UnityEngine;
 
 public class FreezeForAudioClipOnTrigger : MonoBehaviour
@@ -10,12 +11,14 @@ public class FreezeForAudioClipOnTrigger : MonoBehaviour
     private GameObject player;
     private float clipLength;
     private bool playing;
+    private Collider _collider;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player"); 
         pc = player.GetComponent<PlayerController>();
         clipLength = clip.length;
         playing = false;
+        _collider = this.gameObject.GetComponent<Collider>();
     }
 
     // Update is called once per frame
@@ -30,7 +33,7 @@ public class FreezeForAudioClipOnTrigger : MonoBehaviour
             {
                 pc.enabled = true;
                 playing = false;
-                this.enabled = false;
+                Destroy(this);
             }
         }
     }

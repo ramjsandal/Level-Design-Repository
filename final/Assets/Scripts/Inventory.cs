@@ -92,5 +92,13 @@ public class Inventory : MonoBehaviour
 
         return idx;
     }
-    
+
+    public void ClearInventory()
+    {
+        for (int i = 0; i < stringsArray.Length; i++)
+        {
+            stringsArray[i] = "";
+            countArray[i] = 0;
+        }
+    }
 }
